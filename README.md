@@ -31,14 +31,14 @@ Zepto是一个轻量级的针对现代高级浏览器的JavaScript库， 它与j
 使用 canvas 的 drawImage() 方法在画布上绘制图像（使用Canvas代替Image），触发物理设备的GPU渲染，优化图片的加载速度。[HTML5 canvas drawImage() 参考手册](http://www.w3school.com.cn/tags/canvas_drawimage.asp)
 
 **使用方法：**
-{% highlight javascript %}
-var imageObj=new Image();// 创建一个Image对象
-imageObj.index=i;// 设置图片标志
-imageObj.onload=function(){// 图片加载触发的方法
-  var cvs=$('#cvs_'+this.index)[0].getContext('2d');
-  cvs.width=this.width;
-  cvs.height=this.height;
-  cvs.drawImage(this,0,0,this.width,this.height);// 在画布上定位图像，并规定图像的宽度和高度
-}
-imageObj.src=imgSrc;// 加载图片
-{% endhighlight %}
+
+    var imageObj=new Image();// 创建一个Image对象
+    imageObj.index=i;// 设置图片标志
+    imageObj.onload=function(){// 图片加载触发的方法
+      var cvs=$('#cvs_'+this.index)[0].getContext('2d');
+      cvs.width=this.width;
+      cvs.height=this.height;
+      cvs.drawImage(this,0,0,this.width,this.height);// 在画布上定位图像，并规定图像的宽度和高度
+    }
+    imageObj.src=imgSrc;// 加载图片
+
